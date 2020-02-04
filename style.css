@@ -1,0 +1,39 @@
+body {
+    background-color: aqua;
+    width: 1000px;
+    margin-left: 300px;
+    font-size: 18px;
+    background-image: url('./princessbride.jpeg');
+}
+
+h1{
+    color: yellow;
+    margin-left: 250px;
+}
+
+button {
+    border-radius: 4px;
+    border: solid;
+    border-color: blue;
+    margin: 10px;
+}
+
+.form1 {
+    margin: 10px;
+}
+
+.form2 {
+    margin: 10px;
+}
+
+.form3 {
+    margin: 10px;
+}
+
+.main {
+    border: solid;
+    border-color: cadetblue;
+    padding: 10px;
+    background-color: cadetblue;
+}
+

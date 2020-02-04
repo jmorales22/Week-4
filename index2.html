@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Mad Lib</title>
+</head>
+<body>
+    <div class="main">
+    <h1>The Princess Bride Mad Lib</h1>
+    <p> Return to a time when men were <span id="noun1">____________</span> and swamps were 
+    <span id="noun2">____________</span>. <span id="adjective">____________</span> swamps, that is. 
+    Full of lightning-<span id="noun3">____________</span> and <span id="noun4">____________</span> 
+    of unusual <span id="noun5">____________</span>. Lagoons were inhabited by <span id="verb1">____________</span> 
+    eels. And the most <span id="adjective2">____________</span> woman in the world was named... 
+    <span id="name">____________</span>.
+    </p>
+       
+    <form class="form1">
+    <label>A Plural Noun:
+        <input type="text" id="noun1Input" value="" />
+    </label>
+    <label>Another Plural Noun:
+        <input type="text" id="noun2Input" value="" />
+    </label>
+    <label>An Adjective:
+        <input type="text" id="adjectiveInput" value="" />
+    </label>
+    <label>A Noun:
+        <input type="text" id="noun3Input" value="" />
+    </label>
+    </form>
+    <form class="form2">
+    <label>A Noun Starting with R:
+        <input type="text" id="noun4Input" value="" />
+    </label>
+    <label>A Noun Starting with S:
+        <input type="text" id="noun5Input" value="" />
+    </label>
+    <label>A Verb
+        <input type="text" id="verb1Input" value="" />
+    </label>    
+    </form>
+    <form class="form3">
+    <label>An Adjective:
+        <input type="text" id="adjective2Input" value="" />
+    </label>
+    <label>A Silly Name:
+        <input type="text" id="nameInput" value="" />
+    </label>
+    <button class="button" type="button" id="clickMe">Complete Mad Lib</button>
+    </form>
+    </div>
+</body>
+<script>
+    const mybutton = document.getElementById("clickMe");
+    const noun1 = document.getElementById("noun1");
+    const noun1Input = document.getElementById("noun1Input");
+    const noun2 = document.getElementById("noun2");
+    const noun2Input = document.getElementById("noun2Input");
+    const adjective = document.getElementById("adjective");
+    const adjectiveInput = document.getElementById("adjectiveInput");
+    const noun3 = document.getElementById("noun3");
+    const noun3Input = document.getElementById("noun3Input");
+    const noun4 = document.getElementById("noun4");
+    const noun4Input = document.getElementById("noun4Input");
+    const noun5 = document.getElementById("noun5");
+    const noun5Input = document.getElementById("noun5Input");
+    const verb1 = document.getElementById("verb1");
+    const verb1Input = document.getElementById("verb1Input");
+    const adjective2 = document.getElementById("adjective2");
+    const adjective2Input = document.getElementById("adjective2Input");
+    const name = document.getElementById("name");
+    const nameInput = document.getElementById("nameInput");
+    
+
+    mybutton.addEventListener("click", function(e){
+        e.preventDefault();
+
+    noun1.innerHTML = noun1Input.value;
+    noun2.innerHTML = noun2Input.value;
+    adjective.innerHTML = adjectiveInput.value;
+    noun3.innerHTML = noun3Input.value;
+    noun4.innerHTML = noun4Input.value;
+    noun5.innerHTML = noun5Input.value;
+    verb1.innerHTML = verb1Input.value;
+    adjective2.innerHTML = adjective2Input.value;
+    name.innerHTML = nameInput.value;
+    })
+</script>
+</html>
