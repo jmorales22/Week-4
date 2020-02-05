@@ -1,9 +1,10 @@
 body {
     background-color: aqua;
     width: 1000px;
-    margin-left: 300px;
+    margin-left: 400px;
     font-size: 18px;
     background-image: url('./princessbride.jpeg');
+    line-height: 50px;
 }
 
 h1{
@@ -18,22 +19,32 @@ button {
     margin: 10px;
 }
 
+.response {
+    border: solid;
+    border-color: gray;
+    padding: 10px;
+    background-color: gray;
+    height: 300px;
+    width: 975px;
+}
+
 .form1 {
-    margin: 10px;
+    margin: 20px;
 }
 
 .form2 {
-    margin: 10px;
+    margin: 20px;
 }
 
 .form3 {
-    margin: 10px;
+    margin: 20px;
 }
 
 .main {
     border: solid;
-    border-color: cadetblue;
-    padding: 10px;
-    background-color: cadetblue;
+    border-color: gray;
+    padding: 20px;
+    background-color: gray;
+    height: 250px;
 }
 
