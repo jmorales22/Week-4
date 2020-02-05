@@ -10,86 +10,84 @@
 <body>
     <div class="main">
     <h1>The Princess Bride Mad Lib</h1>
-    <p> Return to a time when men were <span id="noun1">____________</span> and swamps were 
-    <span id="noun2">____________</span>. <span id="adjective">____________</span> swamps, that is. 
-    Full of lightning-<span id="noun3">____________</span> and <span id="noun4">____________</span> 
-    of unusual <span id="noun5">____________</span>. Lagoons were inhabited by <span id="verb1">____________</span> 
-    eels. And the most <span id="adjective2">____________</span> woman in the world was named... 
-    <span id="name">____________</span>.
+    <p> Return to a time when men were <span class="pluralNoun">____________</span> and swamps were 
+    <span class="pluralNoun">____________</span>. <span class="adjective">____________</span> swamps, that is. 
+    Full of lightning-<span class="noun">____________</span> and <span class="noun">____________</span> 
+    of unusual <span class="noun">____________</span>. Lagoons were inhabited by <span class="verb">____________</span> 
+    eels. And the most <span class="adjective">____________</span> woman in the world was named... 
+    <span class="name">____________</span>.
     </p>
     </div>
-    <div class="response">
     <form class="form1">
-    <label>A Plural Noun:
-        <input type="text" id="noun1Input" value="" />
-    </label>
-    <label>Another Plural Noun:
-        <input type="text" id="noun2Input" value="" />
-    </label>
-    <label>An Adjective:
-        <input type="text" id="adjectiveInput" value="" />
-    </label>
-    <form class="form2"></form>
-    <label>A Noun:
-        <input type="text" id="noun3Input" value="" />
-    </label>
-    </form>
-    <label>A Noun Starting with R:
-        <input type="text" id="noun4Input" value="" />
-    </label>
-    <label>A Noun Starting with S:
-        <input type="text" id="noun5Input" value="" />
-    </label>
-    </form>
-    <form class="form3">
-    <label>A Verb
-        <input type="text" id="verb1Input" value="" />
-    </label>    
-    <label>An Adjective:
-        <input type="text" id="adjective2Input" value="" />
-    </label>
-    <label>A Silly Name:
-        <input type="text" id="nameInput" value="" />
-    </label>
-    <button class="button" type="button" id="clickMe">Complete Mad Lib</button>
-    </form>
-    </div>
+        <label> Plural Noun:
+            <input type="text" class="userEntry"/>
+        </label>
+        <label>Plural Noun:
+            <input type="text" class="userEntry"/>
+        </label>
+        <label> Adjective:
+            <input type="text" class="userEntry"/>
+        </label>
+        <label> Noun:
+            <input type="text" class="userEntry"/>
+        </label>
+        <label>Noun:
+            <input type="text" class="userEntry"/>
+        </label>
+        </form>
+        <form class="form2">
+        <label>Noun:
+            <input type="text" class="userEntry"/>
+        </label>
+        <label>Verb:
+            <input type="text" class="userEntry"/>
+        </label>    
+        <label>Adjective:
+            <input type="text" class="userEntry"/>
+        </label>
+        <label>Name:
+            <input type="text" class="userEntry"/>
+        </label>
+        <button id="getUserInput" type="button">Complete Mad Lib</button>
+        </form>
 </body>
 <script>
-    const newParagraph = document.querySelectorAll('p');
-    const mybutton = document.getElementById("clickMe");
-    const noun1 = document.getElementById("noun1");
-    const noun1Input = document.getElementById("noun1Input");
-    const noun2 = document.getElementById("noun2");
-    const noun2Input = document.getElementById("noun2Input");
-    const adjective = document.getElementById("adjective");
-    const adjectiveInput = document.getElementById("adjectiveInput");
-    const noun3 = document.getElementById("noun3");
-    const noun3Input = document.getElementById("noun3Input");
-    const noun4 = document.getElementById("noun4");
-    const noun4Input = document.getElementById("noun4Input");
-    const noun5 = document.getElementById("noun5");
-    const noun5Input = document.getElementById("noun5Input");
-    const verb1 = document.getElementById("verb1");
-    const verb1Input = document.getElementById("verb1Input");
-    const adjective2 = document.getElementById("adjective2");
-    const adjective2Input = document.getElementById("adjective2Input");
-    const name = document.getElementById("name");
-    const nameInput = document.getElementById("nameInput");
-    
+    const pluralNouns = document.querySelectorAll(".pluralNoun");
+    const nouns = document.querySelectorAll(".noun");
+    const verbs = document.querySelectorAll(".verb");
+    const adjectives = document.querySelectorAll(".adjective");
+    const names = document.querySelectorAll(".name");
+    const getUserInputButton = document.querySelector('#getUserInput');
+    const userInputs = document.querySelectorAll('.userEntry');
 
-    mybutton.addEventListener("click", function(e){
-        e.preventDefault();
+function parseUserInput(inputList) {
+  const arrayOfInputs = [];
+  inputList.forEach(function(input){
+    arrayOfInputs.push(input.value);
+  });
+  return arrayOfInputs;
+}
 
-    noun1.innerHTML = noun1Input.value;
-    noun2.innerHTML = noun2Input.value;
-    adjective.innerHTML = adjectiveInput.value;
-    noun3.innerHTML = noun3Input.value;
-    noun4.innerHTML = noun4Input.value;
-    noun5.innerHTML = noun5Input.value;
-    verb1.innerHTML = verb1Input.value;
-    adjective2.innerHTML = adjective2Input.value;
-    name.innerHTML = nameInput.value;
-    })
+getUserInputButton.addEventListener('click', function(event){
+  event.preventDefault();
+  const entryArray = parseUserInput(userInputs);
+
+pluralNouns.forEach(function(pluralNoun, index){
+    pluralNoun.innerHTML = entryArray[index];
+})
+nouns.forEach(function(noun, index){
+    noun.innerHTML = entryArray[index];
+})
+verbs.forEach(function(verb, index){
+    verb.innerHTML = entryArray[index];
+})
+adjectives.forEach(function(adjective, index){
+    adjective.innerHTML = entryArray[index];
+})
+names.forEach(function(name, index){
+    name.innerHTML = entryArray[index];
+})
+});
+
 </script>
 </html>

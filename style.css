@@ -1,5 +1,4 @@
 body {
-    background-color: aqua;
     width: 1000px;
     margin-left: 400px;
     font-size: 18px;
@@ -29,15 +28,17 @@ button {
 }
 
 .form1 {
-    margin: 20px;
+    border-color: gray;
+    background-color: gray;
+    width: 1000px;
+    height: 100px;
 }
 
-.form2 {
-    margin: 20px;
-}
-
-.form3 {
-    margin: 20px;
+.form2{
+    border-color: gray;
+    background-color: gray;
+    width: 1000px;
+    height: 100px; 
 }
 
 .main {
